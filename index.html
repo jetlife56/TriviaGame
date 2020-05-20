@@ -2,21 +2,116 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-            <!--Css File-->
+            <!-- Css File -->
         <link rel="stylesheet" href="assets/css/style.css">
-            <!--Bootstrap File-->
+            <!-- Bootstrap File -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
             <!--jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <title>Trivia Game!</title>
+        <title>Walking Dead | Trivia Game!</title>
     </head>
     <body>
-        <div class="jumbotron">
-            <h1 class="display-4">The Walking Dead <br> Trivia Game</h1>
-            <hr class="my-4">
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          </div>
+        <div>
+            <div class="jumbotron">
+                <div class="title_rules">
+                        <!-- Title -->
+                    <h1 class="display-4" id="game-title">The Walking Dead Trivia Game</h1>
+                    <h4 class="rules_of_game">You have 30 seconds to answer each question. You can only choose one answer so choose wisely. <br> Thanks for Playing!!</be></h4>
+                    <h3 class="timer">Time Remaining:<span id="countDown"></span></h3>
+                </div>
+                    <!-- Trivia Game Questions and Answers -->
+                <div class="questions" id="question1">
+                    <div class="margin"></div>
+                        <h6>What city did "The Walking Dead" series start  </h6>
+                        <label for=""> Los Angeles </label>
+                        <input type="radio" id="city1" name="LA">
+
+                        <label for="city2"> New York </label>
+                        <input type="radio" id="city2" name="NY">
+
+                        <label for="city3"> Atlanta </label>
+                        <input type="radio" id="city3" name="ATL">
+
+                        <label for="city4"> Denver </label>
+                        <input type="radio" id="city4" name="DEN">
+                </div>
+                <div class="questions" id="question2">
+                    <h6>Carol kills several people in the course of the "The Walking Dead" who is not one?</h6>
+                    
+                    <label for="name1">David</label>
+                    <input type="radio" id="name1" name="david">
+
+                    <label for="city2">Karen</label>
+                    <input type="radio" id="name2" name="karen">
+
+                    <label for="city3">Lizzie</label>
+                    <input type="radio" id="name3" name="lizzie">
+
+                    <label for="city4">Mike</label>
+                    <input type="radio" id="name4" name="mike">
+                </div>
+                <div class="questions" id="question3">
+                    <h6>Which eye did Carl lose?</h6>
+                    
+                    <label for="left">Left Eye</label>
+                    <input type="radio" id="left" name="left eye">
+
+                    <label for="right">Right Eye</label>
+                    <input type="radio" id="right" name="right eye">
+
+                    <label for="both">Both</label>
+                    <input type="radio" id="both" name="both">
+
+                    <label for="neither">Neither</label>
+                    <input type="radio" id="neither" name="none">
+                </div>
+                <div class="questions" id="question4">
+                    <h6>When Glenn is taken by the Vatos gang where do they tale him?</h6>
+
+                    <label for="area1">Restaurant</label>
+                    <input type="radio" id="area1" name="restaurant">
+
+                    <label for="area2">Nursing Home</label>
+                    <input type="radio" id="area2" name="nursinghome">
+
+                    <label for="area3">Military Base</label>
+                    <input type="radio" id="area3" name="military">
+
+                    <label for="area4">Jail</label>
+                    <input type="radio" id="area4" name="jail">
+                </div>
+                <div class="questions" id="question5">
+                        <h6>Who is Merle sibling?</h6>
+                        
+                        <label for="sibling1">Carol</label>
+                        <input type="radio" id="sibling1" name="carol">
+
+                        <label for="sibling2">Rick</label>
+                        <input type="radio" id="sibling2" name="rick">
+
+                        <label for="sibling3">Dayrl</label>
+                        <input type="radio" id="sibling3" name="dayrl">
+
+                        <label for="sibling4">Shane</label>
+                        <input type="radio" id="sibling4" name="shane">
+                </div>
+                <div class="questions" id="question6">
+                <h6>How do you feel about your answers</h6>
+
+                <label for="bad">Bad</label>
+                <input type="radio" id="bad" name="Bad">
+
+                <label for="notbad">Not so Bad</label>
+                <input type="radio" id="notbad" name="not so bad">
+
+                <label for="good">Good</label>
+                <input type="radio" id="good" name="good">
+
+                <label for="great">Great</label>
+                <input type="radio" id="great" name="great">
+            </div>
+        </div>
+    </div>
         
             <!-- Javascript and Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>

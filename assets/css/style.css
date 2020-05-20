@@ -6,3 +6,40 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+                                        /* Game Title, Rules, Timer, and  Main content */
+.jumbotron{
+    width: 85%;
+    height: auto;
+    padding: 50px;
+    margin: 30px 100px 10px 100px;
+    display: grid;
+    grid-template-rows: 300px 100px 100px 100px 100px 100px 100px;
+    background-color: rgb(51, 51, 51);
+}
+
+.jumbotron:hover {
+    opacity: 0.86;
+}
+            /* Title and Rules  */
+.title_rules{
+    background-color: blue;
+
+}
+
+/* Title */
+
+
+/*Game Rules */ 
+
+
+/* Timer */
+
+            /* Questions and Answers */
+
+/* Questions*/
+
+
+/* Answers*/
+
+
+
