@@ -12,32 +12,46 @@ body {
     height: auto;
     padding: 50px;
     margin: 30px 100px 10px 100px;
+    background-color: gray;
     display: grid;
     grid-template-rows: 300px 100px 100px 100px 100px 100px 100px;
-    background-color: rgb(51, 51, 51);
+    grid-template-columns: 1fr 2fr;
+    color: rgb(241, 238, 238);
+    opacity: 0.95;
 }
 
-.jumbotron:hover {
-    opacity: 0.86;
-}
+
             /* Title and Rules  */
 .title_rules{
-    background-color: blue;
-
+    background-color: rgb(53, 53, 54);
+    text-align: center;
 }
 
 /* Title */
-
-
+#game-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4vw;
+    color:rgb(143, 65, 65);
+    padding: 2vw;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
 /*Game Rules */ 
-
+.rules_of_game {
+    grid-area: 1 / 2;
+    font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1% 7% 2.33% 7%;
+}
 
 /* Timer */
+
 
             /* Questions and Answers */
 
 /* Questions*/
-
+.questions {
+    color: black;
+}
 
 /* Answers*/
 
