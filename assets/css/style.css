@@ -1,12 +1,15 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-image: url(../images/walkingdeadbackground.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
-                                        /* Game Title, Rules, Timer, and  Main content */
+body {
+    background-image: url(../images/walkingdeadbackground.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+ /*------- Main content --------*/
 .jumbotron{
     width: 85%;
     height: auto;
@@ -14,15 +17,18 @@ body {
     margin: 30px 100px 10px 100px;
     background-color: gray;
     display: grid;
-    grid-template-rows: 300px 100px 100px 100px 100px 100px 100px;
     grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 2em;
     color: rgb(241, 238, 238);
     opacity: 0.95;
 }
 
 
-            /* Title and Rules  */
+/*------- Title and Rules -------*/
 .title_rules{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: rgb(53, 53, 54);
     text-align: center;
 }
@@ -32,28 +38,41 @@ body {
     font-family: 'Permanent Marker', cursive;
     font-size: 4vw;
     color:rgb(143, 65, 65);
-    padding: 2vw;
-    grid-area: 1 / 1 / span 1 / span 1;
+
 }
 /*Game Rules */ 
 .rules_of_game {
-    grid-area: 1 / 2;
+    
     font-size: 2vw;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1% 7% 2.33% 7%;
 }
 
 /* Timer */
+.timer{
+    align-items: start;
+    
+}
 
-
-            /* Questions and Answers */
-
+/*------- Questions and Answers -------*/
+.q_and_a {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    justify-content: end;
+}
 /* Questions*/
-.questions {
+.questions > h6 {
+    font-size: 20px;
+    font-weight: bold;
     color: black;
 }
 
+
 /* Answers*/
+
+
+    
 
 
 
