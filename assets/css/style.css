@@ -78,6 +78,11 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 }
 
+div > p {
+    color:rgb(33, 187, 33);
+    text-align: center;
+}
+
 /*------- MEDIA QUERIES ------*/
 
 @media (max-width: 984.1px){
@@ -91,7 +96,7 @@ grid-template-columns: repeat(2, 1fr);
     .title_rules{
         display: grid;
         grid-template-rows: repeat(3, 30%);
-        grid-template-column: auto;
+        grid-template-columns: auto;
     }
     
     /* Title */
