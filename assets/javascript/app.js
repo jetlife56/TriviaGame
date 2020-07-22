@@ -42,8 +42,8 @@ $(document).ready(function(){
      $("#timer").empty();
      $("#timer").hide();
      $("#userscore").show();
-     $("#correct-answers").text("Correct answers (Way to go!): " + numCorrect);
-     $("#incorrect-answers").text("Incorrect answers (You can always try again!): " + numIncorrect);
+     $("#correct").text("Correct answers (Way to go!): " + numCorrect);
+     $("#incorrect").text("Incorrect answers (You can always try again!): " + numIncorrect);
      $("#unanswered").text("Skipped questions (Meh): " + unanswered);
    }
  }
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
       }
  
-     // add a Done button to the end of the page and register its click handler
+     // add a Done button to the end of the page
      var doneButton = '<button class="btn btn-primary" id="done-button" type="submit">Done</button>';
      divContainer.append(doneButton);
      $("#done-button").on("click", gameState.stopTimer);
@@ -87,19 +87,19 @@ $(document).ready(function(){
      var numIncorrect = 0;
      var unanswered = 0;
  
-     // loop through to compare the text of the label with the user answers
+     // loop through the text of the label with the user answers
      // increment score counts appropriately
      for (var i = 0; i < questionBank.length; i++) {
        correctAnswer = questionBank[i].correct;
        userAnswer = $('input[id=radio'+i+']:checked + label').text();
  
        if (userAnswer === correctAnswer) {
-        correct++;
+        numCorrect++;
        } else if (userAnswer === "") {
          unanswered++;
        } else if (userAnswer !== correctAnswer) {
          {
-           incorrect++;
+           numIncorrect++;
          }
        }
      }
@@ -144,7 +144,7 @@ $(document).ready(function(){
      correct: "Shane" 
    },
    {
-     question: "Who did Nigen kill in the Final Epsiode of Season 6?",
+     question: "Who did Nigen kill in the Final Episode of Season 6?",
      answers: ["Glenn", "Maggie", "Rick", "Jackie"],
      correct: "Glenn"
    }

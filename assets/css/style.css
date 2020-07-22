@@ -83,7 +83,7 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 div > p {
-    color:rgb(33, 187, 33);
+    color:rgb(143, 65, 65);
     text-align: center;
 }
 
@@ -93,13 +93,13 @@ div > p {
     .jumbotron {
         max-width: 650px;
         width: 85%;
-        display: grid;
+        /*display: grid;
         grid-template-rows: repeat(7, 25%);
-        grid-template-columns: 99%;
+        grid-template-columns: 99%;*/
     }
     .title_rules{
         display: grid;
-        grid-template-rows: repeat(3, 30%);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-columns: auto;
     }
     
@@ -124,6 +124,12 @@ div > p {
         grid-row: 3;
         align-items: start;
         
+    }
+
+    /*Start and Done Button*/
+    .btn {
+        width: 20%;
+        max-height: 33.33%;
     }
 }
 
