@@ -16,21 +16,20 @@ body {
     height: auto;
     margin: 10px auto;
     background-color: gray;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+   /* display: grid;
+    grid-template-columns: 2fr;
     grid-auto-rows: minmax(150px, auto);
     grid-gap: 2em;
     color: rgb(241, 238, 238);
-    opacity: 0.95;
+    opacity: 0.95;*/
 }
 
 
 /*------- Title and Rules -------*/
 .title_rules{
     display: grid;
-    grid-template-rows: repeat(3, 25% auto);
-    background-color: rgb(53, 53, 54);
-    text-align: center;
+    grid-template-rows: repeat(3, auto);
+    
 }
 
 /* Title */
@@ -38,19 +37,24 @@ body {
     font-family: 'Permanent Marker', cursive;
     font-size: 4vw;
     color:rgb(143, 65, 65);
-
 }
 /*Game Rules */ 
 .rules_of_game {
     font-size: 2vw;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   align-items: center;
+  
+}
+
+.btn {
+    width: 20%;
+    background-color:rgb(143, 65, 65);
+    border-color: rgb(143, 65, 65);
 }
 
 /* Timer */
 .timer{
     justify-content: center;
-    
+    color: black;
 }
 
 /*------- Questions and Answers -------*/
@@ -109,7 +113,7 @@ div > p {
     }
     /*Game Rules */ 
     .rules_of_game {
-        grid-row: 2 /;
+        grid-row: 2 /3;
         font-size: 2vw;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         /*padding: 1% 7% 2.33% 7%;*/

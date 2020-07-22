@@ -36,13 +36,14 @@ $(document).ready(function(){
    },
  
    // hide the questions and display the end page with results
-   showEndPage: function(correct, incorrect, unanswered) {
+   showEndPage: function(numCorrect, numIncorrect, unanswered) {
      $("#end-page").show();
      $("#questions-box").empty();
      $("#timer").empty();
      $("#timer").hide();
-     $("#correct-answers").text("Correct answers (Way to go!): " + correct);
-     $("#incorrect-answers").text("Incorrect answers (You can always try again!): " + incorrect);
+     $("#userscore").show();
+     $("#correct-answers").text("Correct answers (Way to go!): " + numCorrect);
+     $("#incorrect-answers").text("Incorrect answers (You can always try again!): " + numIncorrect);
      $("#unanswered").text("Skipped questions (Meh): " + unanswered);
    }
  }
@@ -68,7 +69,9 @@ $(document).ready(function(){
        divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer1 + '</label></div>');
        divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer2 + '</label></div>');
        divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer3 + '</label></div>');
-     }
+       divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer4 + '</label></div>');
+
+      }
  
      // add a Done button to the end of the page and register its click handler
      var doneButton = '<button class="btn btn-primary" id="done-button" type="submit">Done</button>';
@@ -80,8 +83,8 @@ $(document).ready(function(){
    checkAnswers: function() {
      var correctAnswer;
      var userAnswer;
-     var correct = 0;
-     var incorrect = 0;
+     var numCorrect = 0;
+     var numIncorrect = 0;
      var unanswered = 0;
  
      // loop through to compare the text of the label with the user answers
@@ -102,7 +105,7 @@ $(document).ready(function(){
      }
  
      // show the end page with the score tally
-     gameState.showEndPage(correct, incorrect, unanswered);
+     gameState.showEndPage(numCorrect, numIncorrect, unanswered);
    },
  }
  
@@ -111,13 +114,13 @@ $(document).ready(function(){
  [
    {
      question: "What city did The Walking Dead Series start?",
-     answers: ["Los Angeles", "New York", " Denver"],
+     answers: ["Los Angeles", "New York", "Atlanta","Denver"],
      correct: "Atlanta"
    },
  
    {
      question: "Carol kills several people in the course of the Walking Dead who is not one?",
-     answers: ["Lizzie", "Karen", "Mike"],
+     answers: ["Lizzie", "David", "Karen", "Mike"],
      correct: "David"
    },
    {
@@ -132,8 +135,8 @@ $(document).ready(function(){
    },
    {
      question: "Who is Merle sibling?",
-     answers: ["carrots and peas", "a cross of tomatoes and tobacco", "gummy bears"],
-     correct: "a cross of tomatoes and tobacco"
+     answers: ["Carol", " Tyrone", "Daryl", "Shane"],
+     correct: "Daryl"
    },
    {
      question: "Who is Judith Father?",
@@ -142,7 +145,7 @@ $(document).ready(function(){
    },
    {
      question: "Who did Nigen kill in the Final Epsiode of Season 6?",
-     answers: ["Flanders", "Van Houten", "Smithers"],
-     correct: "Flanders"
+     answers: ["Glenn", "Maggie", "Rick", "Jackie"],
+     correct: "Glenn"
    }
  ]

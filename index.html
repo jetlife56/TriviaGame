@@ -19,17 +19,21 @@
         <div class="jumbotron">
 <!---------- Title and Game rules ---------->
             <div id="start-btn" class="title_rules start-page">
-                <div id="game-title"><h1 >The Walking Dead Trivia Game</h1></div>
+                <div id="game-title"><h1>The Walking Dead Trivia Game</h1></div>
                 <div class="rules_of_game"><h4>You have 30 seconds to answer each question. See how well you know "The Walking Dead"<br> Thanks for Playing!!</h4></div>
-                <div id="timer"></div>
-                <div id="start-btn" class="btn btn-primary">Start</div>
+                <div id="start-btn" class="btn">Start</div>
             </div>
+
+            <!-------- Timer --------->
+            <div class="timer-box">
+                <div><h3 id="timer"></h3></div>
+            </div>
+            
 <!---------- Trivia Game Questions and Answers ---------->
             <div class="q_and_a form-check" id="questions-box">
-
             </div>
             <div class="hidden" id="end-page">
-              <h2>Your Score:</h2>
+              <h2 id="userscore"></h2>
               <p id="correct"></p>
               <p id="incorrect"></p>
               <p id="unanswered"></p>
